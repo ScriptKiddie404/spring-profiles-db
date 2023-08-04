@@ -1,0 +1,17 @@
+package com.scriptkiddie404.profiles.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
+
+@Configuration
+@Profile("prod")
+public class ProdDbConfig {
+
+	@Value("${spring.datasource.url}")
+	private String url;
+
+	@Value("${spring.datasource.username}")
+	private String username;
+
+}
